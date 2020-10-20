@@ -13,12 +13,12 @@ peline{
    
 stage('test'){
      steps{
-       sh 'mvn test'
+       sh 'mvn clean test'
      }
    }
 stage('package'){
      steps{
-       sh 'mvn package'
+       sh 'mvn package -DskipTests'
      }
    }
 }
